@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALAMi</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        /* Custom CSS */
+        .header {
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .nav-item a {
+            color: #4CAF50;
+            font-size: 18px;
+        }
+
+        .nav-item a:hover {
+            color: #087f23;
+        }
+
+        .search-icon {
+            font-size: 24px;
+            color: #4CAF50;
+        }
+
+        .form-control {
+            border-radius: 20px;
+            padding-left: 15px;
+            border: 2px solid #4CAF50;
+        }
+
+        .btn-search {
+            border-radius: 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 5px 15px;
+            border: none;
+        }
+
+        .btn-search:hover {
+            background-color: #087f23;
+        }
+
+        .offcanvas-header {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+
+        .navbar-toggler {
+            border: none;
+            outline: none;
+        }
+
+        .navbar-toggler:focus,
+        .navbar-toggler-icon:focus {
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon {
+            color: #4CAF50;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .social-icons a {
+            font-size: 20px;
+            margin: 0 10px;
+        }
+
+        /* Media Queries for Mobile */
+        @media (max-width: 767px) {
+            .footer .social-icons a {
+                font-size: 18px;
+                margin: 0 5px;
+            }
+
+            .btn-search {
+                font-size: 14px;
+            }
+        }
+
+        /* Card Styles */
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .card img {
+            border-radius: 8px 8px 0 0;
+            object-fit: cover;
+            height: 180px;
+            width: 100%;
+        }
+
+        .card-title {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-md bg-body-tertiary fixed-top header">
+        <div class="container-fluid">
+            <a class="navbar-brand logo" href="#">ALAMi</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active bi-house bi" aria-current="page" href="index.html"> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bi-bookmark bi" href="#"> Save</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bi-pencil-square bi" href="#"> Add News</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle bi-person bi" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Nama
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item bi-box-arrow-in-right bi" href="#"> Log In</a></li>
+                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item bi-box-arrow-right bi" href="#"> Log Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Search Form (in Navbar) -->
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-search" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5 pt-4" id="news-container">
+        <!-- Cards will be dynamically inserted here -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Save</a></li>
+                        <li><a href="#">Add News</a></li>
+                        <li><a href="#">Login</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Email: info@alami.com</p>
+                    <p>Phone: +62 123 4567</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12">
+                    <p>&copy; 2024 ALAMi. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript for Loading News -->
+    <script>
+        async function loadNews() {
+            try {
+                const response = await fetch('/api/news');
+                const news = await response.json();
+                const container = document.getElementById('news-container');
+                
+                news.forEach(article => {
+                    const cardHTML = `
+                        <div class="card mb-4">
+                            <img src="${article.image}" class="card-img-top" alt="${article.title}">
+                            <div class="card-body">
+                                <h5 class="card-title">${article.title}</h5>
+                                <p class="card-text">${article.excerpt}</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    `;
+                    container.innerHTML += cardHTML;
+                });
+            } catch (error) {
+                console.error('Error loading news:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadNews);
+    </script>
+</body>
+</html>
